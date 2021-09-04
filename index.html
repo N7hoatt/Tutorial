@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://github.com/N7hoatt/Tutorial/blob/master/styles.css">
+    <title>N7hoatt</title>
+</head>
+<body> 
+    <h1>Chat with N7hoatt</h1>
+    <div id="messages"></div>
+    <form id="chat-form">
+        <input type="text" id="chat-message">
+        <button id="chat-submit">Send</button>
+    </form>
+</body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        const chatForm = document.querySelector('#chat-form')
+        const chatMes = document.querySelector('#chat-message')
+
+        chatForm.addEventListener('submit', (e) =>{
+            e.preventDefault();
+            const message = chatMes.value
+            socket.emit('chat-sent', {message: message})
+            chatMes.value = ''
+        })
+
+        const messages = document.querySelector('#messages');
+        socket.on('user-chat',  (message) =>{
+            const chatItem =  document.createElement('p');
+            chatItem.textContent = message.message;
+            messages.appendChild(chatItem);
+        })
+    </script>
+</html>

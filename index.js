@@ -7,8 +7,11 @@ const { Server} = require("socket.io")
 
 const io = new Server(sever)
 
+app.use(express.static(__dirname));
 app.get('/', (req, res)  =>{
     res.sendFile(__dirname + "/index.html");
+    res.sendFile(__dirname + "/style.css");
+
 })
 
 io.on("connection",  (socket) =>{

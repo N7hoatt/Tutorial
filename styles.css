@@ -14,5 +14,5 @@ button {
 }
 .Username{
   font-weight: bold;
-  text-transform: uppercase;
+  font-style: italic;
 }

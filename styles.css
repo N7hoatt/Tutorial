@@ -1,9 +1,18 @@
-#messages{
-    border: 1px solid;
-    min-width: 100px;
-    min-height: 100px;
-    overflow: scroll;
+#messages {
+  border: 1px solid;
+  min-width: 100px;
+  min-height: 300px;
+  max-height: 300px;
+  overflow: scroll;
 }
-hr{
-    border-top: 1px dashed gray;
+hr {
+  border-top: 1px dashed gray;
+}
+button {
+  background-color: #3498db;
+  font-size: 20px;
+}
+.Username{
+  font-weight: bold;
+  text-transform: uppercase;
 }

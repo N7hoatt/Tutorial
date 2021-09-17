@@ -8,12 +8,20 @@
     <title>N7hoatt</title>
   </head>
   <body>
-    <h1>Chat with N7hoatt</h1>
-    <div id="messages"></div>
-    <form id="chat-form">
-      <input type="text" id="chat-message" />
-      <button id="chat-submit">Send</button>
-    </form>
+    <div class="container">
+      <h1>
+        Chat with N7hoatt
+      </h1>
+      <div id="status"></div>
+      <div id="chat">
+        <input type="text" id="username" placeholder="Enter name...">
+        <input type="text" id="texting" placeholder="Enter message...">
+        <button id="clearBtn" class="clear-btn">Clear</button>
+        <div class="card">
+          <div id="messages"></div>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="http://localhost:4000/socket.io/socket.io.js"></script>
   <script src="send-chat.js"></script>

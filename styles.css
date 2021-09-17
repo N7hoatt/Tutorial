@@ -1,18 +1,26 @@
-#messages {
+*{font-family: "Segoe UI","Lucida Grande",Arial,sans-serif;}
+#messages{
   border: 1px solid;
   min-width: 100px;
   min-height: 300px;
   max-height: 300px;
-  overflow: scroll;
+  overflow: auto;
 }
-hr {
-  border-top: 1px dashed gray;
-}
-button {
-  background-color: #3498db;
+.clear-btn {
+  position: relative;
+  background-color: red;
   font-size: 20px;
 }
-.Username{
-  font-weight: bold;
-  font-style: italic;
+#username, #texting{
+  width: 300px;
+  height: 30px;
+  margin: 5px 10px 10px 0px;
+}
+.message{
+  margin: 7px;
+  padding: 0px 0px 3px 3px;
+  border-bottom: 1px dotted #ccc;
+}
+.message:hover{
+  background-color: rgb(240, 240, 240);
 }
